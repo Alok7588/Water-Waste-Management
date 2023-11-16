@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background:black;
+
+}
+nav{
+  background: #1b1b1b;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  line-height: 0px;
+  padding-left: 40px;
+  margin-top: 10px;
+}
+
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+
+  display: inline-block;
+  background: #1b1b1b;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 7px #33ffff,
+               0 0 14px #66ffff;
+           
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 4px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+  z-index: 2;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 200px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -70px;
+  left: -201px;
+}
+.show,.icon,input{
+  display: none;
+}
+.activebar{
+  border-top: 5px solid cyan;
+}
+@media all and (max-width: 1280px) {
+  nav ul li a{
+
+    font-size: 15px;
+
+  }
+
+
+  #logoheight{
+    height: 35px;
+    width: 170px;
+    margin-top: 7.5px;
+  }
+
+
+
+}
+@media all and (max-width: 1080px) {
+  .icon{
+
+    margin-top: -3px;
+  }
+  nav ul{
+    margin-right: 0px;
+    float: left;
+
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+    height: 50px;
+  }
+  #logoheight{
+    height: 40px;
+    width: 200px;
+    margin-top: 0px;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: white;
+    font-size: 15px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: cyan;
+  }
+  .icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+  .activebar{
+    border-top: none;
+  }
+}
+@media all and (max-width: 440px) {
+  .icon{
+    font-size: 22px;
+    margin-top: -3px;
+  }
+  #logoheight{
+    height: 30px;
+    width: 150px;
+    margin-top: 5px;
+  }
+  .show{
+    font-size: 15px;
+  }
+  .activebar{
+    border-top: none;
+  }
+}
+@media all and (max-width: 260px) {
+  .icon{
+    font-size: 15px;
+    margin-top: -5px;
+  }
+  #logoheight{
+    height: 25px;
+    width: 100px;
+    margin-top: 7px;
+  }
+  .show{
+    font-size: 15px;
+  }
+  .activebar{
+    border-top: none;
+  }
+}
+@media all and (max-width: 210px) {
+  .icon{
+    font-size: 14px;
+    margin-top: -4px;
+  }
+
+  #logoheight{
+    height: 20px;
+    width: 80px;
+    margin-top: 10px;
+  }
+  .show{
+    font-size: 15px;
+  }
+  .activebar{
+    border-top: none;
+  }
+}
+
+div.gallery {
+  margin-top: 20px;
+  margin-left: 41px;
+  margin-bottom: 20px;
+  border: 10px solid white;
+  float: left;
+  width: 440px;
+  height: 680px;
+  border-radius: 10px;
+  background-image: url("Script_Back.gif");
+}
+div.gallery:hover {
+  border: 10px solid cyan;
+}
+
+div.gallery img {
+  margin-top:20px;
+
+  width: 370px;
+  height:430px;
+  margin-left:24px;
+  border: 10px solid white;
+  border-radius: 10px;
+}
+
+
+div.desc {
+  margin-left:12px;
+  font-size:19px;
+  color: white;
+  margin-left:24px;
+}
+
+div.gallery img:hover {
+  margin-top:20px;
+
+  width: 370px;
+  height:430px;
+  margin-left:24px;
+  border: 10px solid cyan;
+  border-radius: 10px;
+}
